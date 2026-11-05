@@ -1,0 +1,6 @@
+$ cd secondChance-backend/util/import-mongo && node index.js
+Connected successfully to server
+Inserted documents: 16
+
+$ node -e 'require("dotenv").config();const {MongoClient}=require("mongodb");(async()=>{const c=new MongoClient(process.env.MONGO_URL);await c.connect();console.log("Documents in secondChance.secondChanceItems:", await c.db("secondChance").collection("secondChanceItems").countDocuments());await c.close()})()'
+Documents in secondChance.secondChanceItems: 16
