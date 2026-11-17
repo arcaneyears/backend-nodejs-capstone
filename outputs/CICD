@@ -1,0 +1,41 @@
+$ gh run view 44081750900 --verbose
+
+✓ main CI/CD · 44081750900
+Triggered via push about 1 minute ago
+
+JOBS
+✓ Build client in 40s (ID 134033818835)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Run build
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job
+✓ Lint JavaScript Files in 9s (ID 134033819296)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Install JSHint
+  ✓ Run Linter
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job
+
+View this run on GitHub: https://github.com/arcaneyears/backend-nodejs-capstone/actions/runs/44081750900
+
+$ gh run view --job=134033819296 --log | grep "Run Linter" -A 12
+2026-11-17T12:17:39.6150072Z ##[group]Run find ./secondChance-backend -name app.js -exec jshint {} +
+2026-11-17T12:17:39.6150574Z find ./secondChance-backend -name app.js -exec jshint {} +
+2026-11-17T12:17:39.6150962Z find ./secondChance-backend/models -name '*.js' -exec jshint {} +
+2026-11-17T12:17:39.6151411Z find ./secondChance-backend/util -name '*.js' -not -path '*/node_modules/*' -exec jshint {} +
+2026-11-17T12:17:39.6151846Z find ./secondChance-backend/routes -name '*.js' -exec jshint {} +
+2026-11-17T12:17:39.6152227Z find ./sentiment -name '*.js' -not -path '*/node_modules/*' -exec jshint {} +
+2026-11-17T12:17:39.6152573Z echo "Linted all the js files successfully"
+2026-11-17T12:17:39.6199177Z shell: /usr/bin/bash -e {0}
+2026-11-17T12:17:39.6199414Z ##[endgroup]
+2026-11-17T12:17:40.0360577Z Linted all the js files successfully
+2026-11-17T12:17:40.0447856Z Post job cleanup.
+2026-11-17T12:17:40.1408810Z (node:2280) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-17T12:17:40.1409690Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-17T12:17:40.1568573Z Post job cleanup.
