@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/backend-nodejs-capstone/static/css/main.75df5833.css",
+    "main.js": "/backend-nodejs-capstone/static/js/main.36d29c03.js",
+    "index.html": "/backend-nodejs-capstone/index.html",
+    "main.75df5833.css.map": "/backend-nodejs-capstone/static/css/main.75df5833.css.map",
+    "main.36d29c03.js.map": "/backend-nodejs-capstone/static/js/main.36d29c03.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75df5833.css",
+    "static/js/main.36d29c03.js"
+  ]
+}
